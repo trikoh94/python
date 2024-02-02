@@ -6,6 +6,11 @@ while True:
 
     a=input()
 
+
+    if not a.isdigit():
+        print("you have to select the number")
+        continue
+    
     if a=="5":
         break
 
