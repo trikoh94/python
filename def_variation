@@ -1,0 +1,15 @@
+#def profile(name,age,lang1,lang2,lang3):
+#    print("이름:{0}\t나이:{1}\t".format(name,age),end=" ")
+#    print(lang1,lang2,lang3)
+
+#profile("유재석",20,"Python","java","c++")
+#profile("방시혁",24,"c","","")
+
+def profile(name,age,*language):  #*language 가 가변인자임, 몇 개 들어갈지 제한 x
+    print("이름{0}\t 나이{1}\t".format(name,age),end=" ")
+    for lang in language:
+        print(lang, end=" ")
+    print()
+
+profile("유재석",20,"Python","java","c++","swift")
+profile("방시혁",24,"c")

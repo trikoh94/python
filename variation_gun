@@ -1,0 +1,36 @@
+gun=10
+
+def checkpoint(soldiers): #경계근무
+    gun=20  #지역변수
+    gun=gun-soldiers
+    print("[함수 내] 남은 총: {0}".format(gun))
+
+
+print("전체 중 남은 총: {0}".format(gun))
+checkpoint(2)  #2명이 경계근무 나감
+print("남은 총{0}".format(gun))
+
+
+def checkpoint(soldiers): #경계근무
+    global gun   ## 이걸 넣어주면 전역변수가 됨!
+    gun=gun-soldiers
+    print("[함수 내] 남은 총: {0}".format(gun))
+
+
+print("전체 중 남은 총: {0}".format(gun))
+checkpoint(2)  #2명이 경계근무 나감
+print("남은 총{0}".format(gun))
+
+
+gun=10
+
+def checkpoint_ret(gun,soldiers):
+    gun=gun-soldiers
+    print("[함수 내] 남은 총:{0}".format(gun))
+    return gun   #return 값을 써줌으로 써 밖에 있는 값 활용 가능
+
+print("전체 총 : {0}".format(gun))
+gun=checkpoint_ret(gun,2)
+print("남은 총:{0}".format(gun))
+
+
